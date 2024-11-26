@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+
+@model Company
+
+<h1>Delete Category</h1>
+
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" disabled />
+
+    </div>
+    
+    <div>
+        <label asp-for="StreetAddress"></label>
+        <input asp-for="StreetAddress" disabled />
+        
+    </div>
+    <div>
+        <label asp-for="City"></label>
+        <input asp-for="City" disabled />
+        
+    </div>
+    <div>
+        <label asp-for="State"></label>
+        <input asp-for="State" disabled />
+        
+    </div>
+    <div>
+        <label asp-for="PostalCode"></label>
+        <input asp-for="PostalCode" disabled />
+        
+    </div>
+    <div>
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" disabled />
+        
+    </div>
+    <div>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a class="btn btn-danger" asp-controller="Company" asp-action="Index">Return to Index</a>
+    </div>
+</form>

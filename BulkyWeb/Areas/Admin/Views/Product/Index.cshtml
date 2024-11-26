@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+@model List<Product>
+
+
+
+<partial name="_Notification" />
+<h1>Product Table</h1>
+
+<a class="btn btn-primary" asp-area="Admin" asp-controller="Product" asp-action="Upsert">Create product</a>
+   <table id="tblData">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>  </th>
+    </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+    
+</table>
+
+@section Scripts{
+    <script src="~/js/product.js"></script>
+}
+

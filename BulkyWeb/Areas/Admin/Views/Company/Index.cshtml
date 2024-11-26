@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Index";
+
+}
+
+@model List<Company>
+
+
+
+<partial name="_Notification" />
+<h1>Company Table</h1>
+<a class="btn btn-primary" asp-area="Admin" asp-controller="Company" asp-action="Create">Register a company</a>
+
+<table id="tblData2">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Street Address</th>
+            <th>City</th>
+            <th>Phone Number</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+
+</table>
+
+@section Scripts {
+    <script src="~/js/company.js"></script>
+}

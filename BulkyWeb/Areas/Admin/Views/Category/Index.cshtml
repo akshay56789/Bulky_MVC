@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Category>
+
+<partial name="_Notification" />
+<h1>Category Table</h1>
+
+<a class="btn btn-primary" asp-controller="Category" asp-action="Create">Create category</a>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Display Order</th>
+    </tr>
+    @foreach(var obj in Model.OrderByDescending(i=>i.DisplayOrder))
+    {
+        <tr>
+            <td>@obj.Name</td>
+            <td>@obj.DisplayOrder</td>
+            <td><a class="btn btn-primary" asp-controller="Category" asp-action="Edit" asp-route-Id="@obj.Id">Edit</a></td>
+            <td><a class="btn btn-primary" asp-controller="Category" asp-action="Delete" asp-route-Id="@obj.Id">Delete</a></td>
+        </tr>
+    }
+</table>

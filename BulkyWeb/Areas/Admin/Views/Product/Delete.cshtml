@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+
+@model Product
+
+<h1>Delete Product</h1>
+
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" disabled />
+
+    </div>
+    <p>This product will be permanently deleted.</p>
+    <div>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a class="btn btn-danger" asp-area="Admin" asp-controller="Product" asp-action="Index">Return to Index</a>
+    </div>
+</form>
